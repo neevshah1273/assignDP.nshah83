@@ -14,7 +14,4 @@ public class ClassProductList {
         visitor.visitProduct(this.productList.get(0));
     }
 
-    public int size() {
-        return productList.size();
-    }
 }

@@ -13,6 +13,7 @@ public class Main {
         while (true){
             System.out.println("Enter choice");
             System.out.println("1: Create User");
+            System.out.println("2: Login");
             System.out.println("Anything else for exit");
             String string = scanner.nextLine();
             if(string.compareTo("1")==0){
@@ -26,12 +27,19 @@ public class Main {
                 facade.createUser(temp);
                 System.out.println("Successfully Registered");
             }
+            else if (string.equals("2")){
+                if(facade.login()){
+                    System.out.println("Successfully logged In!");
+                }
+                else {
+                    System.out.println("Eh! Unsuccessful attempt");
+                }
+            }
             else{
                 break;
             }
 
         }
-
     }
 }
 

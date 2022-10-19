@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Facade {
 
     private int userType;
@@ -12,8 +14,16 @@ public class Facade {
 
     PersonList personList = new PersonList();
 
+    Login newLogin = new Login();
+
+
     public Boolean login(){
-        return true;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter UserName");
+        String username = scanner.nextLine();
+        System.out.println("Enter Password");
+        String password = scanner.nextLine();
+        return newLogin.newLoginAttempt(personList, username, password);
     }
 
     public void addTrading(){

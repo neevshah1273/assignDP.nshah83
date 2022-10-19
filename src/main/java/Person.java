@@ -2,9 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class Person {
-    public ProductMenu theProductMenu;
 
-    public Map<String, String> map = new HashMap<>();
+    public ProductMenu theProductMenu;
 
     public String username;
 
@@ -14,6 +13,14 @@ public abstract class Person {
         this.username=username;
         this.password = password;
 
+    }
+
+    Person(ProductMenu productMenu){
+        this.theProductMenu=productMenu;
+    }
+
+    public void setTheProductMenu(ProductMenu productMenu){
+        this.theProductMenu=productMenu;
     }
 
 

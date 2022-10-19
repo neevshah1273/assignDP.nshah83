@@ -10,6 +10,8 @@ public class Facade {
 
     private Person thePerson;
 
+    PersonList personList = new PersonList();
+
     public Boolean login(){
         return true;
     }
@@ -39,7 +41,14 @@ public class Facade {
     }
 
     public void createUser(UserInfoItem userinfoitem){
-
+        if(userinfoitem.userType){
+            Person person = new Buyer(userinfoitem.name, userinfoitem.password);
+            personList.addi(person);
+        }
+        else{
+            Person person = new Seller(userinfoitem.name, userinfoitem.password);
+            this.personList.addi(person);
+        }
     }
 
     public void createProductList(){

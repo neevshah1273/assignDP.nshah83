@@ -6,9 +6,14 @@ public abstract class Person {
 
     public Map<String, String> map = new HashMap<>();
 
+    public String username;
+
+    public String password;
+
     Person(String username, String password){
-        System.out.println("Person"+username+password);
-//        map.put(username, password);
+        this.username=username;
+        this.password = password;
+
     }
 
 

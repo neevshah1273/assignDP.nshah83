@@ -11,6 +11,10 @@ public class ClassProductList {
     }
 
     public void accept(NodeVisitor visitor){
+        visitor.visitProduct(this.productList.get(0));
+    }
 
+    public int size() {
+        return productList.size();
     }
 }

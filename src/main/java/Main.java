@@ -9,6 +9,7 @@ public class Main {
 
 
 
+
         while (true){
             System.out.println("Enter choice");
             System.out.println("1: Create User");
@@ -22,8 +23,6 @@ public class Main {
                 System.out.println("Enter User Type 0 For Buyer and 1 for seller");
                 String type = scanner.nextLine();
                 UserInfoItem temp = new UserInfoItem(username, passWord, type.equals("0")? false : true);
-                System.out.println(temp.name);
-
                 facade.createUser(temp);
                 System.out.println("Successfully Registered");
             }

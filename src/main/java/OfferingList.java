@@ -4,4 +4,6 @@ import java.util.List;
 public class OfferingList {
 
     List<Offering> offeringList = new ArrayList<>();
+
+    OfferingIterator offeringIterator = new OfferingIterator(offeringList);
 }

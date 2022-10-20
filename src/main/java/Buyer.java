@@ -7,9 +7,23 @@ public class Buyer extends Person{
         super(username, password);
     }
 
+    Scanner scanner = new Scanner(System.in);
+
     @Override
     public void showMenu() {
-        System.out.println("Showing menu of buyer");
+        System.out.println("Hello Dear Buyer");
+        System.out.println("which Menu would you like to see?");
+        System.out.println("0-> Produce Product Menu");
+        System.out.println("1-> Meat Product Menu");
+        System.out.println("Press any other key for exit");
+        String selectedOption = scanner.nextLine();
+        if(selectedOption.equals("0")){
+            this.theProductMenu.showMenu();
+        }
+        else if(selectedOption.equals("1")){
+            this.theProductMenu.showMenu();
+        }
+        return;
     }
 
     public ProductMenu CreateProductMenu(){

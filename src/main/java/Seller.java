@@ -1,14 +1,28 @@
 import java.util.Scanner;
 
 public class Seller extends Person{
+
+    Scanner scanner = new Scanner(System.in);
+
     Seller(String username, String password) {
-//        System.out.println("Seller"+username+password);
         super(username, password);
     }
 
     @Override
     public void showMenu() {
-        System.out.println("Showing menu of seller");
+        System.out.println("Hello Dear Seller");
+        System.out.println("which Menu would you like to see?");
+        System.out.println("0-> Produce Product Menu");
+        System.out.println("1-> Meat Product Menu");
+        System.out.println("Press any other key for exit");
+        String selectedOption = scanner.nextLine();
+        if(selectedOption.equals("0")){
+            this.theProductMenu.showMenu();
+        }
+        else if(selectedOption.equals("1")){
+            this.theProductMenu.showMenu();
+        }
+        return;
     }
 
     public ProductMenu CreateProductMenu(){

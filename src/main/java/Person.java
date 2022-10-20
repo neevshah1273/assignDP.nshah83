@@ -12,7 +12,6 @@ public abstract class Person {
     Person(String username, String password){
         this.username=username;
         this.password = password;
-
     }
 
     Person(ProductMenu productMenu){

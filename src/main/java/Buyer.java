@@ -27,6 +27,7 @@ public class Buyer extends Person{
             this.theProductMenu.showMenu();
         }
         else if(selectedOption.equals("1")){
+            this.theProductMenu= new MeatProductMenu();
             this.theProductMenu.showMenu();
         }
         return;

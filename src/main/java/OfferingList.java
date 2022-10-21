@@ -1,9 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class OfferingList {
+public class OfferingList extends ArrayList<Offering> {
 
-    List<Offering> offeringList = new ArrayList<>();
 
-    OfferingIterator offeringIterator = new OfferingIterator(offeringList);
 }

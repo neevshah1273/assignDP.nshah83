@@ -1,13 +1,18 @@
 public class MeatProductMenu implements ProductMenu {
 
+    ProductIterator productIterator;
+
+
     @Override
     public void showMenu() {
-        /*
-        *
-        *Factory Method
-        *
-        */
-        System.out.println("Showing meat product menu");
+        System.out.println("Bridge Design Pattern called");
+        productIterator = new ProductIterator(Facade.theProductList);
+        while (productIterator.hasNext()){
+            Product product = productIterator.Next();
+            if(product.productType==0){
+                System.out.println(product.productName);
+            }
+        }        System.out.println("Showing meat product menu");
     }
 
     @Override

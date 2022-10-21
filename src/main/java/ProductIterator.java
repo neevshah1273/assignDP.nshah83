@@ -15,7 +15,6 @@ public class ProductIterator {
         iterator = productList.listIterator();
     }
 
-    int index=0;
 
     public boolean hasNext(){
         return iterator.hasNext();

@@ -3,22 +3,20 @@ public class ProduceProductMenu implements ProductMenu {
 
     ProductIterator productIterator;
 
+    ReminderVisitor reminderVisitor = new ReminderVisitor();
+
     @Override
     public void showMenu() {
 
-        System.out.println("Bride Design Pattern called");
+        System.out.println("Bridge Design Pattern called");
         productIterator = new ProductIterator(Facade.theProductList);
         while (productIterator.hasNext()){
             Product product = productIterator.Next();
             if(product.productType==1){
                 System.out.println(product.productName);
+                reminderVisitor.visitProduct(product);
             }
         }
-        /*
-         *
-         *Factory Method
-         *
-         */
         System.out.println("Showing produce product menu");
     }
 

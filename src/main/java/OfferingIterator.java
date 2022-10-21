@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.List;
 
 public class OfferingIterator {
@@ -8,28 +9,31 @@ public class OfferingIterator {
     *
     */
 
-    List<Offering> offeringList;
+    OfferingList offeringList;
+    Iterator iterator;
 
-    OfferingIterator(List<Offering> offeringList){
+    OfferingIterator(OfferingList offeringList){
+        System.out.println("Iterator design pattern in use");
         this.offeringList = offeringList;
+        iterator = offeringList.listIterator();
     }
 
 
-    int index=0;
 
     public boolean hasNext(){
-        return (index+1<=this.offeringList.size());
+        return iterator.hasNext();
     }
 
     public Offering Next(){
-        return this.offeringList.get(++index);
+        return (Offering) iterator.next();
     }
 
     public void MoveToHead(){
-        index=0;
+        iterator = offeringList.listIterator();
     }
 
     public void Remove(Offering offering){
-        this.offeringList.remove(offering);
+        iterator.remove();
+        return;
     }
 }

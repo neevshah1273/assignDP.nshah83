@@ -22,9 +22,11 @@ public class Seller extends Person{
         System.out.println("Press any other key for exit");
         String selectedOption = scanner.nextLine();
         if(selectedOption.equals("0")){
+            this.theProductMenu= new ProduceProductMenu();
             this.theProductMenu.showMenu();
         }
         else if(selectedOption.equals("1")){
+            this.theProductMenu= new MeatProductMenu();
             this.theProductMenu.showMenu();
         }
         return;

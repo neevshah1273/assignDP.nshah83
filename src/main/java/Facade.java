@@ -3,6 +3,12 @@ import java.util.Scanner;
 
 public class Facade {
 
+    /*
+    *
+    * Facade Design pattern implemented
+    *
+    * */
+
     private int userType;
 
     private Product theSelectedProduct;
@@ -22,6 +28,7 @@ public class Facade {
     Facade() throws IOException {
         AllFileReader fileReader = new AllFileReader();
         fileReader.read(personList, theProductList);
+        System.out.println("Facade Design Pattern Implemented");
     }
 
     public void showOperations(){

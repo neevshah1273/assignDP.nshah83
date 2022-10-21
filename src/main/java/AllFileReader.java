@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class AllFileReader {
 
+
     public void read(PersonList personList, ClassProductList productList) throws IOException {
         File file = new File("src/main/java/BuyerInfo.txt");
         Scanner sc = new Scanner(file);
@@ -67,10 +68,12 @@ public class AllFileReader {
             }
             System.out.println(type + " " + productName);
             if(type.equals("Meat")){
-                ProductMenu productMenu = new MeatProductMenu();
+                Product product = new Product(productName,0);
+                productList.add(product);
             }
             else if(type.equals("Produce")){
-                ProductMenu productMenu = new ProduceProductMenu();
+                Product product = new Product(productName,1);
+                productList.add(product);
             }
 //            UserInfoItem userInfoItem = new UserInfoItem(username, password, true);
 //            Person person = new Seller(userInfoItem.name, userInfoItem.password);

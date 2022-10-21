@@ -2,6 +2,11 @@ import java.util.List;
 
 public class OfferingIterator {
 
+    /*
+    *
+    * Iterator Design Pattern
+    *
+    */
 
     List<Offering> offeringList;
 

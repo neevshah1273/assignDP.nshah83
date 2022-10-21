@@ -2,6 +2,11 @@ public class MeatProductMenu implements ProductMenu {
 
     @Override
     public void showMenu() {
+        /*
+        *
+        *Factory Method
+        *
+        */
         System.out.println("Showing meat product menu");
     }
 

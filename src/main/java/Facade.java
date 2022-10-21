@@ -9,7 +9,7 @@ public class Facade {
 
     private int nProductCategory;
 
-    private ClassProductList theProductList;
+    public static ClassProductList theProductList = new ClassProductList();
 
     private Person thePerson;
 
@@ -117,7 +117,7 @@ public class Facade {
     }
 
     public Product SelectProduct(){
-        return new Product();
+        return new Product("Test Product",0);
     }
 
     public void productOperation(){

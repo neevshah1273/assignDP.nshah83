@@ -10,6 +10,11 @@ public class Seller extends Person{
 
     @Override
     public void showMenu() {
+        /*
+         *
+         * Bridge Pattern
+         *
+         */
         System.out.println("Hello Dear Seller");
         System.out.println("which Menu would you like to see?");
         System.out.println("0-> Produce Product Menu");

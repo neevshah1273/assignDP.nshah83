@@ -1,29 +1,37 @@
+import javax.swing.text.html.HTMLDocument;
+import java.util.Iterator;
 import java.util.List;
 
 public class ProductIterator {
 
-    List<Product> productList;
+    ClassProductList productList;
 
-    ProductIterator(List<Product> productList){
+
+    Iterator iterator;
+
+    ProductIterator(ClassProductList productList){
+        System.out.println("Iterator design pattern in use");
         this.productList=productList;
+        iterator = productList.listIterator();
     }
 
     int index=0;
 
     public boolean hasNext(){
-        return (index+1<=productList.size());
+        return iterator.hasNext();
     }
 
     public Product Next(){
-        return productList.get(++index);
+        return (Product) iterator.next();
+
     }
 
     public void MoveToHead(){
-        index=0;
+        iterator = ((List<?>) this.productList).listIterator();
     }
 
     public void Remove(Offering offering){
-        productList.remove(offering);
+        iterator.remove();
     }
 
 }

@@ -1,7 +1,24 @@
+
 public class ProduceProductMenu implements ProductMenu {
+
+    ProductIterator productIterator;
 
     @Override
     public void showMenu() {
+
+        System.out.println("Bride Design Pattern called");
+        productIterator = new ProductIterator(Facade.theProductList);
+        while (productIterator.hasNext()){
+            Product product = productIterator.Next();
+            if(product.productType==1){
+                System.out.println(product.productName);
+            }
+        }
+        /*
+         *
+         *Factory Method
+         *
+         */
         System.out.println("Showing produce product menu");
     }
 

@@ -6,8 +6,8 @@ public class ProductIterator {
 
     ClassProductList productList;
 
-
     Iterator iterator;
+
 
     ProductIterator(ClassProductList productList){
         System.out.println("Iterator design pattern in use");
@@ -22,7 +22,6 @@ public class ProductIterator {
 
     public Product Next(){
         return (Product) iterator.next();
-
     }
 
     public void MoveToHead(){

@@ -105,13 +105,8 @@ public class Facade {
         System.out.println("Enter User Type 0 For Buyer and 1 for seller");
         String type = scanner.nextLine();
         UserInfoItem userInfoItem = new UserInfoItem(username, passWord, type.equals("0"));
-        Person person;
-        if(userInfoItem.userType){
-            person = new Buyer(userInfoItem.name, userInfoItem.password);
-        }
-        else{
-            person = new Seller(userInfoItem.name, userInfoItem.password);
-        }
+        PersonFactory personFactory = new PersonFactory();
+        Person person = personFactory.createNewPerson(userInfoItem);
         personList.addi(person);
     }
 
